@@ -1,33 +1,40 @@
-# Energy Optimization through End-User Behavior and Technology Integration
+# Household Energy Consumption Simulation  
+**Modeling the Impact of User Behavior and Smart Technology using Linopy**
 
-# Overview
+## Project Overview
+This project analyzes residential energy consumption using **linear programming** with the **Linopy** library in Python. It simulates hourly energy demand based on behavioral patterns (e.g., careless vs. efficient users) and the integration of smart technologies. The goal is to explore energy optimization and cost/emission reductions in household settings.
 
-This project models a residential household energy system using linear programming to analyze how end-user behavior and technology integration affect total energy consumption and cost eventually contributing to carbon emission.
+Developed as part of the *Operations Research for Energy Systems Application* course at **Ruhr-Universität Bochum**.
 
-We simulate two main contexts:
-1. Behavioral Variation – Users may be careless or efficient in how they use lighting and hot water.
-2. Technology Setup – Smart sensors automatically reduce unnecessary consumption (e.g. lights turn off in daylight, water heating matches actual use).
-
-The optimization model is built using [Linopy](https://linopy.readthedocs.io/) in Python.
-
----
-
-# 🔧 Model Components
-
-#✔️ Decision Variables
-- `x_light[t]` – Energy used for lighting at time `t`
-- `x_water[t]` – Energy used for hot water at time `t`
-- `x_total[t]` – Total energy required at time `t`
-- `x_grid[t]` – Energy drawn from the grid at time `t`
-- (Optional: `x_pv[t]`, `x_batt[t]` for future extensions)
-
-# 📊 Parameters
-- `base_light`, `base_water` – Baseline consumption profiles (hourly)
-- `β_light`, `β_water` – Behavior multipliers (careless vs. efficient)
-- `τ_light`, `τ_water` – Technology efficiency (smart sensors, etc.)
-- `price_grid` – Electricity cost per time step (e.g. €/kWh)
+## Instructors
+- Dr. Jonas Finke  
+- Viktor Schüßler  
+- Jakob Niederhoff  
 
 ---
 
-📈 Objective
-Energy Optimization through End-User Behavior and Technology Integration.
+## Features
+- Linear programming with Linopy
+- Hourly load profile simulation (24h or 8760h)
+- Scenario analysis:  
+  - Careless vs. Efficient user behavior  
+  - With vs. Without Smart Technology  
+- Visual outputs: energy use comparisons, graphs
+
+---
+
+## Technologies Used
+- **Python 3.10+**
+- **Linopy** – Linear optimization modeling  
+- Pandas – Data handling  
+- NumPy – Numerical arrays  
+- Matplotlib – Plotting  
+
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**
+```bash
+git clone git@github.com:Linus-77/ORESA--Project-Energy-Optimization-.git
+cd energy-linopy-project
